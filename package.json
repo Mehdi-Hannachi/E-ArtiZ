@@ -9,7 +9,7 @@
     "serve": "nodemon server",
     "install-client": "cd client && npm install ",
     "install-server": "npm install",
-    "dev": "concurrently \" npm run serve \"   \" cd client && npm start  \""
+    "dev": "concurrently \" npm run serve \" \" cd client && npm start  \""
   },
   "repository": {
     "type": "git",
