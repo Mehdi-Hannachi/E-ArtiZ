@@ -1,10 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
-    <div >
-    
+    <div>
+      <h1>Hello</h1>
+      <h2>to Aghsel dabchek</h2>
     </div>
   );
 }
