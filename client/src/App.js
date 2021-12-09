@@ -5,6 +5,7 @@ function App() {
     <div>
       <h1>Hello</h1>
       <h2>to Aghsel dabchek</h2>
+      <h2>to Aghsel dabchek</h2>
     </div>
   );
 }
