@@ -23,9 +23,11 @@
   },
   "homepage": "https://github.com/Mehdi-Hannachi/Aghsel_Dabchek#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^6.1.1"
   },
   "devDependencies": {
-    "concurrently": "^6.4.0"
+    "concurrently": "^6.4.0",
+    "dotenv": "^10.0.0"
   }
 }
