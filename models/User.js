@@ -11,6 +11,12 @@ const userSchema = new mongoose.Schema({
     type: String,
   },
 
+  role: {
+    type: String,
+    enum: ["client", "livreur"],
+    default: "client",
+  },
+
   products: [
     {
       type: mongoose.Schema.Types.ObjectId,
