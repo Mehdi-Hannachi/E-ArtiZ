@@ -10,7 +10,14 @@ const userSchema = new mongoose.Schema({
   photo: {
     type: String,
   },
+
+  products: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Product",
+    },
+  ],
   password: String,
 });
 
-module.exports = User = mongoose.model("users", userSchema);
+module.exports = mongoose.model("User", userSchema);
