@@ -23,13 +23,7 @@ function IndexNavbar() {
       <Navbar className={"fixed-top "} expand="lg" color="info">
         <Container>
           <div className="navbar-translate">
-            <NavbarBrand
-              href="https://demos.creative-tim.com/now-ui-kit-react/#/index?ref=nukr-index-navbar"
-              target="_blank"
-              id="navbar-brand"
-            >
-              Phones Store
-            </NavbarBrand>
+            <NavbarBrand id="navbar-brand">ArtiZ</NavbarBrand>
           </div>
           <Collapse className="justify-content-end" navbar>
             <Nav navbar>

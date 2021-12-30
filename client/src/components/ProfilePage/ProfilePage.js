@@ -1,5 +1,4 @@
 import DefaultFooter from "components/Footer/DefaultFooter";
-import userReducer from "components/JS/reducers/userReducer";
 import ExamplesNavbar from "components/NavBar/ExamplesNavbar";
 import React from "react";
 

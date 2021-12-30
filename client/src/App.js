@@ -10,10 +10,8 @@ import { Route, Switch } from "react-router-dom";
 import { getProfile } from "components/JS/actions/userActions";
 
 const App = () => {
-  const dispatch = useDispatch();
-
   const isAuth = useSelector((state) => state.userReducer.isAuth);
-  const loading = useSelector((state) => state.userReducer.loading);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getProfile());

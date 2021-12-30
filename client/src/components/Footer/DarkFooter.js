@@ -12,14 +12,6 @@ function DarkFooter() {
           <ul>
             <li>
               <a
-                href="https://www.creative-tim.com?ref=nukr-dark-footer"
-                target="_blank"
-              >
-                Creative Tim
-              </a>
-            </li>
-            <li>
-              <a
                 href="http://presentation.creative-tim.com?ref=nukr-dark-footer"
                 target="_blank"
               >
@@ -39,17 +31,13 @@ function DarkFooter() {
         <div className="copyright" id="copyright">
           © {new Date().getFullYear()}, Designed by{" "}
           <a
-            href="https://www.invisionapp.com?ref=nukr-dark-footer"
-            target="_blank"
           >
-            Invision
+            SYT
           </a>
-          . Coded by{" "}
+          . Coded by
           <a
-            href="https://www.creative-tim.com?ref=nukr-dark-footer"
-            target="_blank"
           >
-            Creative Tim
+            SYT
           </a>
           .
         </div>

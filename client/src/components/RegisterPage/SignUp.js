@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 // reactstrap components
 import {
   Button,
@@ -17,16 +17,24 @@ import {
   Container,
   Row,
 } from "reactstrap";
-import { userRegiter } from "components/JS/actions/userActions";
+import { userRegister } from "components/JS/actions/userActions";
 
 // core components
 
 const SignUp = () => {
   const history = useHistory();
 
+  const loading = useSelector((state) => state.userReducer.loading);
+
+  console.log(loading);
+
   const [fullName, setFullName] = useState("");
+  const [pseudo, setPseudo] = useState("");
   const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [dateOfBirth, setDateOfBirth] = useState("");
   const [adress, setAdress] = useState("");
+  const [photo, setPhoto] = useState("");
   const [password, setPassword] = useState("");
 
   const dispatch = useDispatch();
@@ -36,24 +44,41 @@ const SignUp = () => {
 
     const newUser = {
       fullName,
+      phoneNumber,
+      dateOfBirth,
+      photo,
       email,
       adress,
       password,
     };
 
-    if (fullName === "" || email === "" || adress === "" || password === "")
+    if (
+      fullName === "" ||
+      email === "" ||
+      adress === "" ||
+      password === "" ||
+      dateOfBirth === "" ||
+      photo === "" ||
+      phoneNumber === ""
+    )
       return alert("Missing some inputs");
-    dispatch(userRegiter(newUser));
+
+    dispatch(userRegister(newUser));
 
     history.push("/login-page");
 
     setFullName("");
     setAdress("");
     setPassword("");
+    setPhoto("");
+    setPhoneNumber("");
+    setDateOfBirth("");
     setEmail("");
   };
 
-  return (
+  return loading ? (
+    <h1> please wait</h1>
+  ) : (
     <>
       <div
         className="section section-signup"
@@ -109,6 +134,46 @@ const SignUp = () => {
                       onChange={(e) => setFullName(e.target.value)}
                     ></Input>
                   </InputGroup>
+                  <InputGroup className={"no-border"}>
+                    <InputGroupAddon addonType="prepend">
+                      <InputGroupText>
+                        <i className="now-ui-icons users_circle-08"></i>
+                      </InputGroupText>
+                    </InputGroupAddon>
+                    <Input
+                      placeholder="Phone Number ..."
+                      type="text"
+                      value={phoneNumber}
+                      onChange={(e) => setPhoneNumber(e.target.value)}
+                    ></Input>
+                  </InputGroup>
+                  <InputGroup className={"no-border"}>
+                    <InputGroupAddon addonType="prepend">
+                      <InputGroupText>
+                        <i className="now-ui-icons users_circle-08"></i>
+                      </InputGroupText>
+                    </InputGroupAddon>
+                    <Input
+                      placeholder="Date of birth"
+                      type="text"
+                      value={dateOfBirth}
+                      onChange={(e) => setDateOfBirth(e.target.value)}
+                    ></Input>
+                  </InputGroup>
+                  <InputGroup className={"no-border"}>
+                    <InputGroupAddon addonType="prepend">
+                      <InputGroupText>
+                        <i className="now-ui-icons users_circle-08"></i>
+                      </InputGroupText>
+                    </InputGroupAddon>
+                    <Input
+                      placeholder="Photo"
+                      type="text"
+                      value={photo}
+                      onChange={(e) => setPhoto(e.target.value)}
+                    ></Input>
+                  </InputGroup>
+
                   <InputGroup className={"no-border"}>
                     <InputGroupAddon addonType="prepend">
                       <InputGroupText>

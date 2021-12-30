@@ -13,8 +13,6 @@ import {
 
 const initialState = {
   loading: false,
-  msg: null,
-  errors: null,
   isAuth: false,
   user: null,
 };
@@ -29,11 +27,28 @@ const userReducer = (state = initialState, { type, payload }) => {
         loading: true,
       };
 
+    case GET_PROFILE_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        user: payload,
+        isAuth: true,
+      };
+
+    case USER_LOGIN_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        token: payload,
+        isAuth: true,
+      };
+
     case USER_REGISTER_SUCCESS:
       return {
         ...state,
         loading: false,
         msg: payload,
+        isAuth: true,
       };
 
     case USER_REGISTER_FAILED:
@@ -44,26 +59,11 @@ const userReducer = (state = initialState, { type, payload }) => {
         errors: payload,
       };
 
-    case USER_LOGIN_SUCCESS:
-      return {
-        ...state,
-        loading: false,
-        isAuth: true,
-        msg: payload,
-      };
-
-    case GET_PROFILE_SUCCESS:
-      return {
-        ...state,
-        loading: false,
-        isAuth: true,
-        user: payload,
-      };
-
     case GET_PROFILE_FAILED:
       return {
         ...state,
         loading: false,
+        isAuth: false,
         errors: payload,
       };
 
