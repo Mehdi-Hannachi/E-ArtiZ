@@ -18,7 +18,7 @@ function DefaultFooter() {
                   href="https://www.creative-tim.com?ref=nukr-default-footer"
                   target="_blank"
                 >
-                  Creative Tim
+                  SYT
                 </a>
               </li>
               <li>
@@ -45,14 +45,14 @@ function DefaultFooter() {
               href="https://www.invisionapp.com?ref=nukr-default-footer"
               target="_blank"
             >
-              Invision
+              SYT{" "}
             </a>
-            . Coded by{" "}
+            . Coded by
             <a
               href="https://www.creative-tim.com?ref=nukr-default-footer"
               target="_blank"
             >
-              Creative Tim
+              SYT{" "}
             </a>
             .
           </div>

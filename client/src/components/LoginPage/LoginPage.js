@@ -2,8 +2,9 @@ import TransparentFooter from "components/Footer/TransparentFooter";
 import { userLogin } from "components/JS/actions/userActions";
 import ExamplesNavbar from "components/NavBar/ExamplesNavbar";
 import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
 import React, { useState } from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // reactstrap components
 import {
@@ -26,13 +27,12 @@ import {
 function LoginPage() {
   const [firstFocus, setFirstFocus] = useState(false);
   const [lastFocus, setLastFocus] = useState(false);
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const isAuth = useSelector((state) => state.userReducer.isAuth);
-  const loading = useSelector((state) => state.userReducer.loading);
-
   const dispatch = useDispatch();
+  const history = useHistory();
 
   React.useEffect(() => {
     document.body.classList.add("login-page");
@@ -49,17 +49,20 @@ function LoginPage() {
   const login = (e) => {
     e.preventDefault();
 
-    dispatch(
-      userLogin({
-        email,
-        password,
-      })
-    );
+    const userCred = {
+      email,
+      password,
+    };
+
+    dispatch(userLogin(userCred));
+
+    history.push("/");
+
+    setEmail("");
+    setPassword("");
   };
 
-  return isAuth ? (
-    <Redirect to="/profile-page" />
-  ) : (
+  return (
     <>
       <ExamplesNavbar />
       <div className="page-header clear-filter" filter-color="blue">

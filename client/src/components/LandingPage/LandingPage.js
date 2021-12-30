@@ -1,6 +1,5 @@
 import DefaultFooter from "components/Footer/DefaultFooter";
 import ExamplesNavbar from "components/NavBar/ExamplesNavbar";
-import LandingPageHeader from "comps/LandingPageHeader";
 import React from "react";
 
 // reactstrap components
@@ -14,6 +13,7 @@ import {
   Row,
   Col,
 } from "reactstrap";
+import LandingPageHeader from "./LandingPageHeader";
 
 // core components
 

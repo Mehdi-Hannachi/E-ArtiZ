@@ -1,7 +1,5 @@
 import axios from "axios";
 
-/********* *******************    User register action creator ********************************** */
-
 import {
   GET_PROFILE,
   GET_PROFILE_FAILED,
@@ -15,29 +13,36 @@ import {
   USER_REGISTER_SUCCESS,
 } from "../actionsTypes/userActionsTypes";
 
-export const userRegiter = (payload) => async (dispatch) => {
+/********* *******************    User register action creator ********************************** */
+
+export const userRegister = (newUser) => async (dispatch) => {
   dispatch({ type: USER_REGISTER });
 
   try {
-    const res = await axios.post("/user/register", payload);
+    const response = await axios.post("/auth/register", newUser);
 
-    dispatch({ type: USER_REGISTER_SUCCESS, payload: res.data.msg });
+    dispatch({ type: USER_REGISTER_SUCCESS, payload: response.data.msg });
   } catch (error) {
-    console.log("register error", error);
-    dispatch({ type: USER_REGISTER_FAILED, payload: error.res.data.msg });
+    dispatch({
+      type: USER_REGISTER_FAILED,
+      payload: error.response.data.errors,
+    });
   }
 };
 
 /********* *******************    User Longin action creator ********************************** */
-export const userLogin = (payload) => async (dispatch) => {
+
+export const userLogin = (userCred) => async (dispatch) => {
   dispatch({ type: USER_LOGIN });
 
   try {
-    const res = await axios.post("/user/login", payload);
-    localStorage.setItem("token", res.data.token);
-    dispatch({ type: USER_LOGIN_SUCCESS, payload: res.data.token });
+    const response = await axios.post("/auth/login", userCred);
+
+    localStorage.setItem("token", response.data.token);
+
+    dispatch({ type: USER_LOGIN_SUCCESS, payload: response.data.token });
   } catch (error) {
-    dispatch({ type: USER_LOGIN_FAILED, payload: error.res.data.msg });
+    dispatch({ type: USER_LOGIN_FAILED, payload: error.response.data.errors });
   }
 };
 
@@ -48,17 +53,16 @@ export const getProfile = () => async (dispatch) => {
 
   const config = {
     headers: {
-      Authorization: localStorage.getItem("token"),
+      authorization: localStorage.getItem("token"),
     },
   };
 
   try {
-    const res = await axios.get("/user/currentUser", config);
-
-    dispatch({ type: GET_PROFILE_SUCCESS, payload: res.data });
+    const response = await axios.get("/auth/currentUser", config);
+    console.log(response.data);
+    dispatch({ type: GET_PROFILE_SUCCESS, payload: response.data });
   } catch (error) {
-    console.log("Get profile error", error);
-    dispatch({ type: GET_PROFILE_FAILED, payload: error.res });
+    dispatch({ type: GET_PROFILE_FAILED, payload: error.response.data });
   }
 };
 

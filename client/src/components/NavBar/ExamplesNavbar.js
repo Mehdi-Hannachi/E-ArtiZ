@@ -64,7 +64,6 @@ function ExamplesNavbar() {
               <DropdownToggle
                 caret
                 data-toggle="dropdown"
-                href="#pablo"
                 id="navbarDropdown"
                 tag="a"
                 onClick={(e) => e.preventDefault()}
@@ -74,29 +73,23 @@ function ExamplesNavbar() {
                 <span className="button-bar"></span>
               </DropdownToggle>
               <DropdownMenu aria-labelledby="navbarDropdown">
-                <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-                  Phones
+                <DropdownItem onClick={(e) => e.preventDefault()}>
+                  All Products
                 </DropdownItem>
                 <DropdownItem to="/profile-page" tag={Link}>
                   Profile
                 </DropdownItem>
-                <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-                  Something else here
-                </DropdownItem>
+
                 <DropdownItem divider></DropdownItem>
-                <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-                  Separated link
-                </DropdownItem>
-                <DropdownItem divider></DropdownItem>
-                <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-                  One more separated link
+                <DropdownItem onClick={(e) => e.preventDefault()}>
+                  Contact Us
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
             <div className="navbar-translate">
-              <NavbarBrand id="navbar-brand">Now Ui Kit</NavbarBrand>
+              <NavbarBrand id="navbar-brand">AritZ</NavbarBrand>
               <UncontrolledTooltip target="#navbar-brand">
-                Designed by Invision. Coded by Creative Tim
+                Designed by SYT. Coded by SYT
               </UncontrolledTooltip>
               <button
                 className="navbar-toggler navbar-toggler"
@@ -123,6 +116,7 @@ function ExamplesNavbar() {
                     Home
                   </NavLink>
                 </NavItem>
+
                 <NavItem onClick={() => dispatch(logOut())}>
                   <NavLink>Log Out</NavLink>
                 </NavItem>
@@ -178,43 +172,10 @@ function ExamplesNavbar() {
       ) : (
         <Navbar className={"fixed-top " + navbarColor} color="info" expand="lg">
           <Container>
-            <UncontrolledDropdown className="button-dropdown">
-              <DropdownToggle
-                caret
-                data-toggle="dropdown"
-                href="#pablo"
-                id="navbarDropdown"
-                tag="a"
-                onClick={(e) => e.preventDefault()}
-              >
-                <span className="button-bar"></span>
-                <span className="button-bar"></span>
-                <span className="button-bar"></span>
-              </DropdownToggle>
-              <DropdownMenu aria-labelledby="navbarDropdown">
-                <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-                  Phones
-                </DropdownItem>
-                <DropdownItem to="/profile-page" tag={Link}>
-                  Profile
-                </DropdownItem>
-                <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-                  Something else here
-                </DropdownItem>
-                <DropdownItem divider></DropdownItem>
-                <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-                  Separated link
-                </DropdownItem>
-                <DropdownItem divider></DropdownItem>
-                <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
-                  One more separated link
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
             <div className="navbar-translate">
-              <NavbarBrand id="navbar-brand">Now Ui Kit</NavbarBrand>
+              <NavbarBrand id="navbar-brand">ArtiZ</NavbarBrand>
               <UncontrolledTooltip target="#navbar-brand">
-                Designed by Invision. Coded by Creative Tim
+                Designed by SYT. Coded by SYT
               </UncontrolledTooltip>
               <button
                 className="navbar-toggler navbar-toggler"

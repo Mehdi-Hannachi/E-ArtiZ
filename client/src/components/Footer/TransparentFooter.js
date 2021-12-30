@@ -15,7 +15,7 @@ function TransparentFooter() {
                 href="https://www.creative-tim.com?ref=nukr-transparent-footer"
                 target="_blank"
               >
-                Creative Tim
+                SYT
               </a>
             </li>
             <li>
@@ -42,14 +42,14 @@ function TransparentFooter() {
             href="https://www.invisionapp.com?ref=nukr-transparent-footer"
             target="_blank"
           >
-            Invision
+            SYT
           </a>
-          . Coded by{" "}
+          . Coded by
           <a
             href="https://www.creative-tim.com?ref=nukr-transparent-footer"
             target="_blank"
           >
-            Creative Tim
+            SYT
           </a>
           .
         </div>
