@@ -73,7 +73,7 @@ function ExamplesNavbar() {
                 <span className="button-bar"></span>
               </DropdownToggle>
               <DropdownMenu aria-labelledby="navbarDropdown">
-                <DropdownItem onClick={(e) => e.preventDefault()}>
+                <DropdownItem to="/product-list" tag={Link}>
                   All Products
                 </DropdownItem>
                 <DropdownItem to="/profile-page" tag={Link}>
