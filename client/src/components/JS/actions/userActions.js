@@ -66,8 +66,8 @@ export const getProfile = () => async (dispatch) => {
   }
 };
 
-/*******************************  Log Out ********** */
 
+/*******************************  Log Out ********** */
 export const logOut = () => (dispatch) => {
   dispatch({ type: LOG_OUT });
   localStorage.removeItem("token");

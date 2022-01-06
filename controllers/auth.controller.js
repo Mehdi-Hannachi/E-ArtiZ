@@ -2,7 +2,7 @@ const User = require("../models/User");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
-/************************************ ************************** */
+/************************************userRegister route callback function ************************** */
 
 exports.userRegister = async (req, res) => {
   const newUser = new User({ ...req.body });
@@ -27,7 +27,7 @@ exports.userRegister = async (req, res) => {
   }
 };
 
-/************************************ ************************** */
+/************************************ userLogin route callback function************************** */
 
 exports.userLogin = async (req, res) => {
   const email = await User.findOne({ email: req.body.email });

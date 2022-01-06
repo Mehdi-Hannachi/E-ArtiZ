@@ -17,7 +17,6 @@ import LandingPageHeader from "./LandingPageHeader";
 
 // core components
 
-
 function LandingPage() {
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [lastFocus, setLastFocus] = React.useState(false);
@@ -43,11 +42,9 @@ function LandingPage() {
               <Col className="ml-auto mr-auto text-center" md="8">
                 <h2 className="title">Who we are?</h2>
                 <h5 className="description">
-                  According to the National Oceanic and Atmospheric
-                  Administration, Ted, Scambos, NSIDClead scentist, puts the
-                  potentially record low maximum sea ice extent tihs year down
-                  to low ice extent in the Pacific and a late drop in ice extent
-                  in the Barents Sea.
+                  You have to show the benefits of the product to your potential
+                  customer. The padding is the feature, the comfort is the
+                  benefit and the selling is the point.
                 </h5>
               </Col>
             </Row>
@@ -59,13 +56,17 @@ function LandingPage() {
                     className="image-container image-left"
                     style={{
                       backgroundImage:
-                        "url(" + require("assets/img/login.jpg").default + ")",
+                        "url(" +
+                        require("assets/img/artiz1.jpeg").default +
+                        ")",
                     }}
                   >
                     <p className="blockquote blockquote-info">
-                      "Over the span of the satellite record, Arctic sea ice has
-                      been declining significantly, while sea ice in the
-                      Antarctichas increased very slightly" <br></br>
+                      You need to grab people’s attention by making a good
+                      description, people won’t read huge chunks of text, so
+                      break the text up into clear, easy to read, small
+                      sentences and lists of features.
+                      <br></br>
                       <br></br>
                       <small>-NOAA</small>
                     </p>
@@ -74,7 +75,9 @@ function LandingPage() {
                     className="image-container"
                     style={{
                       backgroundImage:
-                        "url(" + require("assets/img/bg3.jpg").default + ")",
+                        "url(" +
+                        require("assets/img/artiz2.jpeg").default +
+                        ")",
                     }}
                   ></div>
                 </Col>
@@ -83,7 +86,9 @@ function LandingPage() {
                     className="image-container image-right"
                     style={{
                       backgroundImage:
-                        "url(" + require("assets/img/bg1.jpg").default + ")",
+                        "url(" +
+                        require("assets/img/artiz3.jpeg").default +
+                        ")",
                     }}
                   ></div>
                   <h3>
@@ -134,77 +139,23 @@ function LandingPage() {
                     <img
                       alt="..."
                       className="rounded-circle img-fluid img-raised"
-                      src={require("assets/img/avatar.jpg").default}
+                      src={require("assets/img/sara.jpg").default}
                     ></img>
-                    <h4 className="title">Romina Hadid</h4>
-                    <p className="category text-info">Model</p>
+                    <h4 className="title">Boccia Sara</h4>
+                    <p className="category text-info">Web developer</p>
                     <p className="description">
                       You can write here details about one of your team members.
                       You can give more details about what they do. Feel free to
-                      add some{" "}
-                      <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                        links
-                      </a>{" "}
-                      for people to be able to follow them outside the site.
+                      add some <a>links</a> for people to be able to follow them
+                      outside the site.
                     </p>
-                    <Button
-                      className="btn-icon btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-twitter"></i>
-                    </Button>
-                    <Button
-                      className="btn-icon btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
+                    <Button className="btn-icon btn-round" color="info">
                       <i className="fab fa-instagram"></i>
                     </Button>
-                    <Button
-                      className="btn-icon btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
+                    <Button className="btn-icon btn-round" color="info">
                       <i className="fab fa-facebook-square"></i>
                     </Button>
-                  </div>
-                </Col>
-                <Col md="4">
-                  <div className="team-player">
-                    <img
-                      alt="..."
-                      className="rounded-circle img-fluid img-raised"
-                      src={require("assets/img/ryan.jpg").default}
-                    ></img>
-                    <h4 className="title">Ryan Tompson</h4>
-                    <p className="category text-info">Designer</p>
-                    <p className="description">
-                      You can write here details about one of your team members.
-                      You can give more details about what they do. Feel free to
-                      add some{" "}
-                      <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                        links
-                      </a>{" "}
-                      for people to be able to follow them outside the site.
-                    </p>
-                    <Button
-                      className="btn-icon btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-twitter"></i>
-                    </Button>
-                    <Button
-                      className="btn-icon btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
+                    <Button className="btn-icon btn-round" color="info">
                       <i className="fab fa-linkedin"></i>
                     </Button>
                   </div>
@@ -214,42 +165,50 @@ function LandingPage() {
                     <img
                       alt="..."
                       className="rounded-circle img-fluid img-raised"
-                      src={require("assets/img/eva.jpg").default}
+                      src={require("assets/img/yahya.jpg").default}
                     ></img>
-                    <h4 className="title">Eva Jenner</h4>
-                    <p className="category text-info">Fashion</p>
+                    <h4 className="title">Trabelsi Yahya</h4>
+                    <p className="category text-info">Web developer</p>
                     <p className="description">
                       You can write here details about one of your team members.
                       You can give more details about what they do. Feel free to
-                      add some{" "}
-                      <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                        links
-                      </a>{" "}
-                      for people to be able to follow them outside the site.
+                      add some <a>links</a> for people to be able to follow them
+                      outside the site.
                     </p>
-                    <Button
-                      className="btn-icon btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-google-plus"></i>
+                    <Button className="btn-icon btn-round" color="info">
+                      <i className="fab fa-instagram"></i>
                     </Button>
-                    <Button
-                      className="btn-icon btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-youtube"></i>
+                    <Button className="btn-icon btn-round" color="info">
+                      <i className="fab fa-facebook-square"></i>
                     </Button>
-                    <Button
-                      className="btn-icon btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-twitter"></i>
+                    <Button className="btn-icon btn-round" color="info">
+                      <i className="fab fa-linkedin"></i>
+                    </Button>
+                  </div>
+                </Col>
+                <Col md="4">
+                  <div className="team-player">
+                    <img
+                      alt="..."
+                      className="rounded-circle img-fluid img-raised"
+                      src={require("assets/img/taieb.png").default}
+                    ></img>
+                    <h4 className="title">Trabelsi Taieb</h4>
+                    <p className="category text-info">Web developer</p>
+                    <p className="description">
+                      You can write here details about one of your team members.
+                      You can give more details about what they do. Feel free to
+                      add some <a>links</a> for people to be able to follow them
+                      outside the site.
+                    </p>
+                    <Button className="btn-icon btn-round" color="info">
+                      <i className="fab fa-instagram"></i>
+                    </Button>
+                    <Button className="btn-icon btn-round" color="info">
+                      <i className="fab fa-facebook-square"></i>
+                    </Button>
+                    <Button className="btn-icon btn-round" color="info">
+                      <i className="fab fa-linkedin"></i>
                     </Button>
                   </div>
                 </Col>
@@ -260,7 +219,7 @@ function LandingPage() {
         <div className="section section-contact-us text-center">
           <Container>
             <h2 className="title">Want to work with us?</h2>
-            <p className="description">Your project is very important to us.</p>
+            <p className="description">Your idea is very important to us.</p>
             <Row>
               <Col className="text-center ml-auto mr-auto" lg="6" md="8">
                 <InputGroup
