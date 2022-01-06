@@ -18,6 +18,7 @@ import {
   Row,
 } from "reactstrap";
 import { userRegister } from "components/JS/actions/userActions";
+import Success from "../Alert/Success";
 
 // core components
 
@@ -25,6 +26,7 @@ const SignUp = () => {
   const history = useHistory();
 
   const loading = useSelector((state) => state.userReducer.loading);
+  const msg = useSelector((state) => state.userReducer.msg);
 
   console.log(loading);
 
@@ -65,7 +67,7 @@ const SignUp = () => {
 
     dispatch(userRegister(newUser));
 
-    history.push("/login-page");
+    // history.push("/login-page");
 
     setFullName("");
     setAdress("");
@@ -93,6 +95,8 @@ const SignUp = () => {
         <Container>
           <Row>
             <Card className="card-signup" data-background-color="blue">
+              {msg ? <Success msg={msg} /> : null}
+
               <Form action="" className="form" method="">
                 <CardHeader className="text-center">
                   <CardTitle className="title-up" tag="h3">

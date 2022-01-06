@@ -1,7 +1,7 @@
-/**************  Add Product ********** */
-
 const Product = require("../models/Product");
 const User = require("../models/User");
+
+/***************************** addProduct route callback function ****************** */
 
 exports.addProduct = async (req, res) => {
   console.log(req.user._id);
@@ -24,9 +24,11 @@ exports.addProduct = async (req, res) => {
     res.status(203).json({ msg: "Product added successfully", product, user });
   } catch (error) {
     console.log("add product failed", error);
-    res.status(403).json({ msg: "Add product failed" });
+    res.status(403).json({ errors: [{ msg: "Add product failed" }] });
   }
 };
+
+/***************************** deleteProduct route callback function ****************** */
 
 exports.deleteProduct = async (req, res) => {
   try {
@@ -46,9 +48,11 @@ exports.deleteProduct = async (req, res) => {
     }
   } catch (error) {
     console.log("Delete product failed", error);
-    res.status(402).json({ msg: "Delete product failed" });
+    res.status(402).json({ errors: [{ msg: "Delete product failed" }] });
   }
 };
+
+/***************************** getProductById route callback function ****************** */
 
 exports.getProductById = async (req, res) => {
   try {
@@ -57,5 +61,16 @@ exports.getProductById = async (req, res) => {
   } catch (error) {
     console.log("fetch product failed", error);
     res.status(400).json({ msg: "Fetch prodcut failed" });
+  }
+};
+
+/***************************** getAllProducts route callback function ****************** */
+
+exports.getAllProducts = async (req, res) => {
+  try {
+    const allProducts = await Product.find();
+    res.status(200).json({ msg: "Fetch products with success", allProducts });
+  } catch (error) {
+    res.status(401).json({ errors: [{ msg: "Fetch products failed" }] });
   }
 };

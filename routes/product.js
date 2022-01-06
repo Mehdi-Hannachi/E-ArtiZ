@@ -3,6 +3,7 @@ const {
   addProduct,
   deleteProduct,
   getProductById,
+  getAllProducts,
 } = require("../controllers/product.controller");
 const isAuth = require("../middlewares/passport-setup");
 
@@ -23,4 +24,7 @@ Router.delete("/deleteProduct/:idUser/:idProduct", deleteProduct);
 
 Router.get("/getProduct/:id", getProductById);
 
+//  http://localhost:9000/product/getAllProducts
+//getAllProducts
+Router.get("/getAllProducts", getAllProducts);
 module.exports = Router;
