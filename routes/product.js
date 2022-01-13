@@ -4,6 +4,7 @@ const {
   deleteProduct,
   getProductById,
   getAllProducts,
+  updateProduct,
 } = require("../controllers/product.controller");
 const isAuth = require("../middlewares/passport-setup");
 
@@ -13,6 +14,10 @@ const Router = express.Router();
 // add product
 
 Router.post("/addProduct", isAuth(), addProduct);
+
+//  http://localhost:9000/product/updateProduct/:idUser/:idProduct
+// update Product
+Router.put("/updateProduct/:idUser/:idProduct", updateProduct);
 
 //  http://localhost:9000/product/deleteProduct/:idUser/:idProduct
 // delete Product

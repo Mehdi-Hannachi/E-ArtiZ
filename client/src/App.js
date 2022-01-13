@@ -10,16 +10,12 @@ import { Route, Switch } from "react-router-dom";
 import { getProfile } from "components/JS/actions/userActions";
 import AddProduct from "components/Products/AddProduct";
 import Productlist from "components/Products/Productlist";
-import { data } from "components/Products/data";
 
 const App = () => {
   const isAuth = useSelector((state) => state.userReducer.isAuth);
   const dispatch = useDispatch();
 
-  const [products, setproducts] = useState(data);
-  const addproduct = (newproduct) => {
-    setproducts([...products, newproduct]);
-  };
+ 
 
   useEffect(() => {
     dispatch(getProfile());
@@ -58,7 +54,7 @@ const App = () => {
         exact
         path="/product-list"
         render={() => (
-          <Productlist products={products} />
+          <Productlist />
         )}
       />
 

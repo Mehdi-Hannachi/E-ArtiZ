@@ -1,3 +1,4 @@
+import { deleteProduct } from "components/JS/actions/productsActions";
 import { getAllProducts } from "components/JS/actions/productsActions";
 import ExamplesNavbar from "components/NavBar/ExamplesNavbar";
 import React, { useEffect } from "react";
@@ -19,7 +20,6 @@ import {
 } from "reactstrap";
 import AddProduct from "./AddProduct";
 
-import { data } from "./data";
 // core components
 
 function Productlist() {
@@ -30,6 +30,8 @@ function Productlist() {
   }, []);
 
   const allProducts = useSelector((state) => state.productReducer.allProducts);
+  const user = useSelector((state) => state.userReducer.user);
+  console.log("ssss", user);
 
   return (
     <>
@@ -51,7 +53,14 @@ function Productlist() {
                         role="tablist"
                         tabs
                       >
-                        <NavItem>
+                        <NavItem
+                          onClick={() =>  {
+                            dispatch(deleteProduct(user._id, el._id) ) ;
+                            dispatch(getAllProducts())
+                          }
+                            
+                          }
+                        >
                           <NavLink>
                             <i className="now-ui-icons objects_umbrella-13"></i>
                             Delete

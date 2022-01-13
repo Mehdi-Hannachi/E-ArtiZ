@@ -74,3 +74,25 @@ exports.getAllProducts = async (req, res) => {
     res.status(401).json({ errors: [{ msg: "Fetch products failed" }] });
   }
 };
+
+exports.updateProduct = async (req, res ) => {
+  try {
+    const user = await User.findOne({ _id: req.params.idUser });
+    const product = await Product.findOne({ _id: req.params.idProduct });
+
+    console.log(product);
+
+    if (user._id.equals(product.userId)) {
+      const updateProduct = await Product.findByIdAndUpdate({
+        _id: req.params.idProduct,
+      });
+
+      res
+        .status(203)
+        .json({ msg: "Product updeted with success", deletedProduct });
+    }
+  } catch (error) {
+    console.log("Update product failed", error);
+    res.status(402).json({ errors: [{ msg: "Update product failed" }] });
+  }
+}
