@@ -122,13 +122,13 @@ function ExamplesNavbar() {
                 </NavItem>
 
                 <NavItem>
-                  <NavLink href="https://github.com/creativetimofficial/now-ui-kit-react/issues?ref=creativetim">
+                  <NavLink href="https://twitter.com/ArtiZ2022">
                     Have an issue?
                   </NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink
-                    href="https://twitter.com/CreativeTim?ref=creativetim"
+                    href="https://twitter.com/ArtiZ2022"
                     target="_blank"
                     id="twitter-tooltip"
                   >
@@ -141,7 +141,7 @@ function ExamplesNavbar() {
                 </NavItem>
                 <NavItem>
                   <NavLink
-                    href="https://www.facebook.com/CreativeTim?ref=creativetim"
+                    href="https://www.facebook.com/profile.php?id=100076881793092"
                     target="_blank"
                     id="facebook-tooltip"
                   >
@@ -154,7 +154,7 @@ function ExamplesNavbar() {
                 </NavItem>
                 <NavItem>
                   <NavLink
-                    href="https://www.instagram.com/CreativeTimOfficial?ref=creativetim"
+                    href="https://www.instagram.com/artiz.syt/"
                     target="_blank"
                     id="instagram-tooltip"
                   >
@@ -219,7 +219,7 @@ function ExamplesNavbar() {
                 </NavItem>
                 <NavItem>
                   <NavLink
-                    href="https://twitter.com/CreativeTim?ref=creativetim"
+                    href="https://twitter.com/ArtiZ2022"
                     target="_blank"
                     id="twitter-tooltip"
                   >
@@ -232,7 +232,7 @@ function ExamplesNavbar() {
                 </NavItem>
                 <NavItem>
                   <NavLink
-                    href="https://www.facebook.com/CreativeTim?ref=creativetim"
+                    href="https://www.facebook.com/profile.php?id=100076881793092"
                     target="_blank"
                     id="facebook-tooltip"
                   >
@@ -245,7 +245,7 @@ function ExamplesNavbar() {
                 </NavItem>
                 <NavItem>
                   <NavLink
-                    href="https://www.instagram.com/CreativeTimOfficial?ref=creativetim"
+                    href="https://www.instagram.com/artiz.syt/"
                     target="_blank"
                     id="instagram-tooltip"
                   >
