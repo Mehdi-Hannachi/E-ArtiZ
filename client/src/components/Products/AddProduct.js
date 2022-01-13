@@ -1,8 +1,8 @@
-import { getAllProducts } from "components/JS/actions/productsActions";
-import { addProduct } from "components/JS/actions/productsActions";
 import React from "react";
 // react plugins that creates an input with a date picker
 import { useDispatch } from "react-redux";
+import { addProduct, getAllProducts } from "../JS/actions/productsActions.js";
+
 // reactstrap components
 import {
   Button,
@@ -38,7 +38,7 @@ function AddProduct() {
     };
 
     dispatch(addProduct(newProduct));
-    dispatch(getAllProducts())
+    dispatch(getAllProducts());
     setModal1(false);
   };
 
@@ -102,11 +102,7 @@ function AddProduct() {
               </FormGroup>
             </ModalBody>
             <div className="modal-footer">
-              <Button
-                color="default"
-                type="button"
-                onClick={((e) => add(e))}
-              >
+              <Button color="default" type="button" onClick={(e) => add(e)}>
                 Add Product
               </Button>
               <Button
