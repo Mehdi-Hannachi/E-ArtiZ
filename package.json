@@ -4,12 +4,14 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "serve": "npx nodemon server",
-    "install-client": "cd client && npm install ",
-    "install-server": "npm install",
-    "dev": "concurrently \" npm run serve \" \" cd client && npm start  \""
+    "server": "nodemon server.js",
+    "client": "cd client && npm run start",
+    "server-install": "npm install",
+    "client-install": "cd client && npm install",
+    "install-all": "concurrently \"npm run server-install\" \"npm run client-install\"",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "repository": {
     "type": "git",
@@ -29,9 +31,7 @@
     "mongoose": "^6.1.1",
     "multer": "^1.4.4",
     "passport": "^0.5.2",
-    "passport-jwt": "^4.0.0"
-  },
-  "devDependencies": {
+    "passport-jwt": "^4.0.0",
     "concurrently": "^6.4.0",
     "dotenv": "^10.0.0"
   }

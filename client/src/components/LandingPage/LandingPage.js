@@ -170,7 +170,11 @@ function LandingPage() {
                     <h4 className="title">Trabelsi Yahya</h4>
                     <p className="category text-info">Web developer</p>
                     <p className="description">
-                    Interacting With Computers — Using computers and computer systems (including hardware and software) to program, write software, set up functions, enter data, or process information also Observing, receiving, and otherwise obtaining information from all relevant sources, 
+                      Interacting With Computers — Using computers and computer
+                      systems (including hardware and software) to program,
+                      write software, set up functions, enter data, or process
+                      information also Observing, receiving, and otherwise
+                      obtaining information from all relevant sources,
                     </p>
                     <Button className="btn-icon btn-round" color="info">
                       <i className="fab fa-instagram"></i>
