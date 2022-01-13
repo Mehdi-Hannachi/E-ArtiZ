@@ -144,10 +144,10 @@ function LandingPage() {
                     <h4 className="title">Boccia Sara</h4>
                     <p className="category text-info">Web developer</p>
                     <p className="description">
-                      You can write here details about one of your team members.
-                      You can give more details about what they do. Feel free to
-                      add some <a>links</a> for people to be able to follow them
-                      outside the site.
+                      Analyzing information and evaluating results to choose the
+                      best solution and solve problems also Identifying the
+                      underlying principles, reasons, or facts of information by
+                      breaking down information or data into separate parts.
                     </p>
                     <Button className="btn-icon btn-round" color="info">
                       <i className="fab fa-instagram"></i>
@@ -170,10 +170,7 @@ function LandingPage() {
                     <h4 className="title">Trabelsi Yahya</h4>
                     <p className="category text-info">Web developer</p>
                     <p className="description">
-                      You can write here details about one of your team members.
-                      You can give more details about what they do. Feel free to
-                      add some <a>links</a> for people to be able to follow them
-                      outside the site.
+                    Interacting With Computers — Using computers and computer systems (including hardware and software) to program, write software, set up functions, enter data, or process information also Observing, receiving, and otherwise obtaining information from all relevant sources, 
                     </p>
                     <Button className="btn-icon btn-round" color="info">
                       <i className="fab fa-instagram"></i>
@@ -196,10 +193,11 @@ function LandingPage() {
                     <h4 className="title">Trabelsi Taieb</h4>
                     <p className="category text-info">Web developer</p>
                     <p className="description">
-                      You can write here details about one of your team members.
-                      You can give more details about what they do. Feel free to
-                      add some <a>links</a> for people to be able to follow them
-                      outside the site.
+                      Developing specific goals and plans to prioritize,
+                      organize, and accomplish your work, He can use relevant
+                      information and individual judgment to determine whether
+                      events or processes comply with laws, regulations, or
+                      standards.
                     </p>
                     <Button className="btn-icon btn-round" color="info">
                       <i className="fab fa-instagram"></i>
